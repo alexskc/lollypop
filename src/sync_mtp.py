@@ -475,7 +475,7 @@ class MtpSync:
                             'filesrc location="%s" ! decodebin\
                             ! audioconvert\
                             ! audioresample\
-                            ! audio/x-raw,format=S16LE,rate=44100,channels=2\
+                            ! audio/x-raw,rate=44100,channels=2\
                             ! rgvolume pre-amp=6.0 headroom=10.0\
                             ! rglimiter ! audioconvert\
                             ! lamemp3enc target=quality quality=%s ! id3v2mux\
@@ -486,7 +486,7 @@ class MtpSync:
                             'filesrc location="%s" ! decodebin\
                             ! audioconvert\
                             ! audioresample\
-                            ! audio/x-raw,format=S16LE,rate=44100,channels=2\
+                            ! audio/x-raw,rate=44100,channels=2\
                             ! lamemp3enc target=quality quality=%s\
                             ! id3v2mux\
                             ! filesink location="%s"'
